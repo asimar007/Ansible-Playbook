@@ -1,0 +1,10 @@
+---
+- name: Install Nginx and Run Nginx
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: stopped
